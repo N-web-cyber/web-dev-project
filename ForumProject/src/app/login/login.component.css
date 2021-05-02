@@ -1,0 +1,20 @@
+form {
+  width: fit-content;
+  margin: auto;
+}
+
+input {
+  display: block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid gray;
+}
+
+button {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 7px 20px;
+  margin: 8px 0;
+  border: 0;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+.topic-detail {
+    max-width: 80%;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+}
+
+.topic-update button {
+    background-color: darkgreen;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+}
+
+.topic-table {
+    margin: 10px 0;
+}
+
+
+.topic-table tr,
+.topic-table td,
+.topic-table th {
+    border: 1px solid gray;
+}
+
+.comment {
+    margin: 10px 0;
+    width: 50%;
+    border: 1px gray solid;
+}
+
+.comment-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment-header * {
+    margin: 0 5px;
+}
+
+.delete {
+    background-color: crimson;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+}
+
+.comment-message {
+    margin: 5px;
+}
+
+.new-comment {
+    background-color: darkblue;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}

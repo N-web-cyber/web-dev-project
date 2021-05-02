@@ -1,0 +1,51 @@
+<div *ngIf="topic" class="topic-detail">
+  <h2>{{topic.title}}</h2>
+  <div *ngIf="user && topic.author.id === user.id" class="topic-update">
+    <input type="text" [(ngModel)]="topic.title">
+    <button (click)="save()">Save</button>
+  </div>
+
+  <table class="topic-table">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div>{{topic.author.username}}</div></td>
+        <td><p>{{topic.description}}</p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- comments -->
+  <div *ngIf="topic.comments">
+    <div class="comment" *ngFor="let comment of topic.comments">
+      <div class="comment-header">
+        <p>Author: {{comment.author.username}}</p>
+        <div *ngIf="user && comment.author.id === user.id">
+          <button (click)="deleteComment(comment.id)">Delete</button>
+        </div>
+        <div><h6>Posted: </h6>{{comment.date | date:'dd MMM y, HH:mm'}}</div>
+      </div>
+      <p class="comment-message">{{comment.content}}</p>
+    </div>
+  </div>
+
+
+  <!-- new comment -->
+  <div *ngIf="logged">
+    <div>
+      <label style="display: block;" for="comment">Reply to post:</label>
+      <textarea [(ngModel)]="content" style="width: 50%;" placeholder="Write your comment here"></textarea>
+    </div>
+    <button (click)="addComment()" class="new-comment">Reply</button>
+  </div>
+  
+  <div *ngIf="!logged">
+    <strong>You need to <a routerLink="/login">sign in</a> to reply</strong>
+  </div>
+</div>
+

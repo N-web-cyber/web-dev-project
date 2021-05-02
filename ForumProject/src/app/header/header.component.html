@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>
+        <a routerLink="/main">IT FORUM</a>
+    </h3>
+    <div>
+        <a *ngIf="!logged" routerLink="/login">
+            <div class="auth">
+                Sign in
+            </div>
+        </a>
+        <a *ngIf="logged" (click) = "logout()">
+            <div class="auth">
+                Logout
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+h2 {
+  margin: 10px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 80%;
+  margin: 20px auto;
+}

@@ -1,0 +1,26 @@
+.container {
+  max-width: 80%;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-title {
+  padding-right: 15px;
+}
+
+.topic td {
+  display: flex;
+  flex-direction: row;
+}
+
+.delete {
+  background-color: crimson;
+  border: 1px solid gray;
+  border-radius: 5px;
+}

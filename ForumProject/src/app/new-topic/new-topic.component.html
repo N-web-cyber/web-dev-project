@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Create new topic</h2>
+
+  <select *ngIf="discussions" [(ngModel)]="selectedDisucssion">
+    <option *ngFor="let discussion of discussions" [ngValue]="discussion">{{discussion.name}}</option>
+  </select>
+
+  <label>Title:</label>
+  <input [(ngModel)]="title" type="text">
+
+  <label>Description:</label>
+  <textarea [(ngModel)]="descripition"></textarea>
+
+  <button class="create" (click)="addTopic()">Create topic</button>
+  <button class="reset" (click)="clear()">Reset</button>
+</div>

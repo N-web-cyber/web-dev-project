@@ -1,0 +1,33 @@
+<div class="container">
+  <nav>
+    <a routerLink="/main">Main Page</a>
+    <a routerLink="/category/{{category_id}}">Go to category</a>
+  </nav>
+  <div class="topics" *ngIf="topics">
+    <table>
+      <thead>
+        <tr>
+          <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="topic" *ngFor="let topic of topics">
+          <td>
+            <h3 class="topic-title">
+              <a [routerLink]="['/category', category_id, 'forum', discussion_id, 'topic-detail', topic.id]">
+                {{topic.title}}
+              </a>
+            </h3>
+            <div *ngIf="user && topic.author.id === user.id">
+              <button (click)="deleteTopic(topic.id)" class="delete">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="logged">
+    <a routerLink="/category/{{category_id}}/forum/{{discussion_id}}/new-topic">New topic</a>
+  </div>
+</div>

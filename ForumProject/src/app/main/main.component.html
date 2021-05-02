@@ -1,0 +1,19 @@
+<div class="category" *ngFor="let category of categories">
+  <h2 class="category-header">
+    <a routerLink="/category/{{category.id}}" class="text-white">{{category.name}}</a>
+  </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Forum</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="category.discussions">
+      <tr *ngFor="let discussion of category.discussions">
+        <td>
+          <h3><a routerLink="/category/{{category.id}}/forum/{{discussion.id}}">{{discussion.name}}</a></h3>
+          <p>{{discussion.description}}</p>
+        </td>
+    </tbody>
+  </table>
+</div>

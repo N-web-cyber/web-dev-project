@@ -1,0 +1,20 @@
+.category {
+    width: 80%;
+    padding: 0 50px;
+    margin: 20px auto;
+}
+
+.category-header {
+    background-color: #05aa4f;
+    color: white;
+    padding: 10px;
+}
+
+.category-header a {
+    color: inherit;
+    text-decoration: 0;
+}
+
+.category-header a:hover {
+    text-decoration: underline;
+}
